@@ -1,11 +1,4 @@
-#
-# This is the user-interface definition of a Shiny web application. You can
-# run the application by clicking 'Run App' above.
-#
-# Find out more about building applications with Shiny here:
-#
-#    http://shiny.rstudio.com/
-#
+
 
 library(shiny)
 library(shinydashboard)#主题
@@ -28,10 +21,10 @@ sidebar <- dashboardSidebar(
     checkboxInput("abcc","choose color ",FALSE),
     conditionalPanel(
       condition = "input.abcc",
-      fluidRow(column(12,"date colcor 1",
+      fluidRow(column(12,"date color 1",
                       jscolorInput("v1",label = NULL,value = "#000000"))),
       br(),
-      fluidRow(column(12,"date colcor 2",
+      fluidRow(column(12,"date color 2",
                       jscolorInput("v2",label = NULL,value = "#000000")))
     ),
     checkboxInput("xyt","Add plot title",FALSE),
